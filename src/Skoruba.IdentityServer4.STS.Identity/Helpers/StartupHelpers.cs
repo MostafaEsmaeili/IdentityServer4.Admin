@@ -354,11 +354,14 @@ namespace Skoruba.IdentityServer4.STS.Identity.Helpers
             builder.AddConfigurationStore<TConfigurationDbContext>(options =>
             {
                 options.ConfigureDbContext = b => b.UseInMemoryDatabase(configurationDatabaseName);
+                options.DefaultSchema = "sec";
             });
 
             builder.AddOperationalStore<TPersistedGrantDbContext>(options =>
             {
                 options.ConfigureDbContext = b => b.UseInMemoryDatabase(operationalDatabaseName);
+                options.DefaultSchema = "sec";
+
             });
 
             return builder;

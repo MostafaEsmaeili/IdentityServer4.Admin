@@ -2,6 +2,7 @@
 using IdentityServer4.EntityFramework.Entities;
 using IdentityServer4.EntityFramework.Options;
 using Microsoft.EntityFrameworkCore;
+using Skoruba.IdentityServer4.Admin.EntityFramework.Constants;
 using Skoruba.IdentityServer4.Admin.EntityFramework.Interfaces;
 
 namespace Skoruba.IdentityServer4.Admin.EntityFramework.DbContexts
@@ -12,7 +13,11 @@ namespace Skoruba.IdentityServer4.Admin.EntityFramework.DbContexts
             : base(options, storeOptions)
         {
         }
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema(SchemaConsts.IdentityServer);
+            base.OnModelCreating(modelBuilder);
+        }
         public DbSet<ApiResourceProperty> ApiResourceProperties { get; set; }
 
         public DbSet<IdentityResourceProperty> IdentityResourceProperties { get; set; }

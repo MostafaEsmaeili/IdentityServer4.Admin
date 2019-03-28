@@ -99,8 +99,11 @@ namespace Skoruba.IdentityServer4.Admin.Helpers
 
             // Config DB for identity
             services.AddDbContext<TIdentityDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString(ConfigurationConsts.IdentityDbConnectionStringKey),
-                    sql => sql.MigrationsAssembly(migrationsAssembly)));
+            {
+                options.UseSqlServer(
+                    configuration.GetConnectionString(ConfigurationConsts.IdentityDbConnectionStringKey),
+                    sql => sql.MigrationsAssembly(migrationsAssembly));
+            });
 
             // Config DB from existing connection
             services.AddConfigurationDbContext<TConfigurationDbContext>(options =>

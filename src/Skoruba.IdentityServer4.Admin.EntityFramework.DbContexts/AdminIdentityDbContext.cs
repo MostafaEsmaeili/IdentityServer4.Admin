@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Skoruba.IdentityServer4.Admin.EntityFramework.Identity.Constants;
+using Skoruba.IdentityServer4.Admin.EntityFramework.Constants;
 using Skoruba.IdentityServer4.Admin.EntityFramework.Identity.Entities.Identity;
+using TableConsts = Skoruba.IdentityServer4.Admin.EntityFramework.Identity.Constants.TableConsts;
 
 namespace Skoruba.IdentityServer4.Admin.EntityFramework.DbContexts
 {
@@ -13,7 +14,8 @@ namespace Skoruba.IdentityServer4.Admin.EntityFramework.DbContexts
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
-        {
+        {        
+            builder.HasDefaultSchema(SchemaConsts.AdminIdentity);
             base.OnModelCreating(builder);
 
             ConfigureIdentityContext(builder);

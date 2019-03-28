@@ -2,6 +2,7 @@
 {
     public static class TableConsts
     {
-        public const string Logging = "Log";
+        public const string Logging = "IdentityLog";
+
     }
 }
