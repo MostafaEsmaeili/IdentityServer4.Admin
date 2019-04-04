@@ -14,7 +14,7 @@ This is currently in **beta version**
 
 The application is written in the **Asp.Net Core MVC - using .NET Core 2.2**
 
-**NOTE:** Works only with **IdentityServer4 version => 2.3.0** 🚀
+**NOTE:** Works only with **IdentityServer4 version 2.3.0 and higher** 🚀
 
 ## Requirements
 
@@ -363,9 +363,11 @@ It is possible to define the configuration according the client type - by defaul
 
 ### 1.1.0:
 
+- [ ] Docker support ([#121](https://github.com/skoruba/IdentityServer4.Admin/issues/121))
 - [ ] Add audit logs to track changes ([#61](https://github.com/skoruba/IdentityServer4.Admin/issues/61))
 - [ ] Create a project template using dotnet CLI - `dotnet new template`
   - [ ] Second template: The administration of the IdentityServer4 (without Asp.Net Core Identity) ([#79](https://github.com/skoruba/IdentityServer4.Admin/issues/79))
+
 
 ### 2.0.0:
 
