@@ -1,13 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-<<<<<<< HEAD:src/Skoruba.IdentityServer4.Admin.EntityFramework.DbContexts/AdminIdentityDbContext.cs
 using Skoruba.IdentityServer4.Admin.EntityFramework.Constants;
-using Skoruba.IdentityServer4.Admin.EntityFramework.Identity.Entities.Identity;
-using TableConsts = Skoruba.IdentityServer4.Admin.EntityFramework.Identity.Constants.TableConsts;
-=======
-using Skoruba.IdentityServer4.Admin.EntityFramework.Shared.Constants;
 using Skoruba.IdentityServer4.Admin.EntityFramework.Shared.Entities.Identity;
->>>>>>> upstream/dev:src/Skoruba.IdentityServer4.Admin.EntityFramework.Shared/DbContexts/AdminIdentityDbContext.cs
+using TableConsts = Skoruba.IdentityServer4.Admin.EntityFramework.Shared.Constants.TableConsts;
 
 namespace Skoruba.IdentityServer4.Admin.EntityFramework.Shared.DbContexts
 {
