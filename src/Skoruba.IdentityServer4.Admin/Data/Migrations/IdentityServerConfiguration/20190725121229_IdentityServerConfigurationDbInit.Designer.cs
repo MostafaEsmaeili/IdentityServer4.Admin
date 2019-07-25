@@ -10,7 +10,7 @@ using Skoruba.IdentityServer4.Admin.EntityFramework.Shared.DbContexts;
 namespace Skoruba.IdentityServer4.Admin.Data.Migrations.IdentityServerConfiguration
 {
     [DbContext(typeof(IdentityServerConfigurationDbContext))]
-    [Migration("20190509130018_IdentityServerConfigurationDbInit")]
+    [Migration("20190725121229_IdentityServerConfigurationDbInit")]
     partial class IdentityServerConfigurationDbInit
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

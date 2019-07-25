@@ -10,7 +10,7 @@ using Skoruba.IdentityServer4.Admin.EntityFramework.Shared.DbContexts;
 namespace Skoruba.IdentityServer4.Admin.Data.Migrations.Logging
 {
     [DbContext(typeof(AdminLogDbContext))]
-    [Migration("20190509125920_LoggingDbInit")]
+    [Migration("20190725121124_LoggingDbInit")]
     partial class LoggingDbInit
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
