@@ -10,7 +10,7 @@ using Skoruba.IdentityServer4.Admin.EntityFramework.Shared.DbContexts;
 namespace Skoruba.IdentityServer4.Admin.Data.Migrations.IdentityServerGrants
 {
     [DbContext(typeof(IdentityServerPersistedGrantDbContext))]
-    [Migration("20190725125647_IdentityServerPersistedGrantsDbInit")]
+    [Migration("20190821144912_IdentityServerPersistedGrantsDbInit")]
     partial class IdentityServerPersistedGrantsDbInit
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,6 +53,8 @@ namespace Skoruba.IdentityServer4.Admin.Data.Migrations.IdentityServerGrants
                     b.HasIndex("DeviceCode")
                         .IsUnique();
 
+                    b.HasIndex("Expiration");
+
                     b.ToTable("DeviceCodes");
                 });
 
@@ -82,7 +84,7 @@ namespace Skoruba.IdentityServer4.Admin.Data.Migrations.IdentityServerGrants
 
                     b.HasKey("Key");
 
-                    b.HasIndex("SubjectId", "ClientId", "Type");
+                    b.HasIndex("SubjectId", "ClientId", "Type", "Expiration");
 
                     b.ToTable("PersistedGrants");
                 });

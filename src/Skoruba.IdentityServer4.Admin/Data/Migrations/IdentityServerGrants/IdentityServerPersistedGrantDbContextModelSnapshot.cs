@@ -51,6 +51,8 @@ namespace Skoruba.IdentityServer4.Admin.Data.Migrations.IdentityServerGrants
                     b.HasIndex("DeviceCode")
                         .IsUnique();
 
+                    b.HasIndex("Expiration");
+
                     b.ToTable("DeviceCodes");
                 });
 
@@ -80,7 +82,7 @@ namespace Skoruba.IdentityServer4.Admin.Data.Migrations.IdentityServerGrants
 
                     b.HasKey("Key");
 
-                    b.HasIndex("SubjectId", "ClientId", "Type");
+                    b.HasIndex("SubjectId", "ClientId", "Type", "Expiration");
 
                     b.ToTable("PersistedGrants");
                 });

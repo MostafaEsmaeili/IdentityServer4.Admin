@@ -54,10 +54,16 @@ namespace Skoruba.IdentityServer4.Admin.Data.Migrations.IdentityServerGrants
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_PersistedGrants_SubjectId_ClientId_Type",
+                name: "IX_DeviceCodes_Expiration",
+                schema: "sec",
+                table: "DeviceCodes",
+                column: "Expiration");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PersistedGrants_SubjectId_ClientId_Type_Expiration",
                 schema: "sec",
                 table: "PersistedGrants",
-                columns: new[] { "SubjectId", "ClientId", "Type" });
+                columns: new[] { "SubjectId", "ClientId", "Type", "Expiration" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
